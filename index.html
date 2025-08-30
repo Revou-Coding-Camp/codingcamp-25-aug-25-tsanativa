@@ -6,27 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 
 </head>
 
-<!-- Nav Bar -->
-<section>
-    <header>
-        <img class="logo" src="logo.png" alt="Logo">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Our Profile</a></li>
-        <li><a href="#">Portofolio</a></li>
-        <li><a href="#">Message Us</a></li>
-    </header>
-</section>
-
 <body>
 
+    <!-- Nav Bar -->
+    <section>
+        <header>
+            <div class="navbar-container">
+                <section class="logo">
+                    <img class="logo" src="img/logo.jpeg" alt="Logo" width="50px" height="50px">
+                </section>
+                <ul class="navbar-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Our Profile</a></li>
+                    <li><a href="#">Portofolio</a></li>
+                    <li><a href="#">Message Us</a></li>
+                </ul>
+            </div>
+        </header>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero section -->
+        <section id="home-page" class="home-page">
+            <header>
+                <h2>Welcome <span id="username"></span> to our website</h2>
+                <h5>This is my first web</h5>
+            </header>
+        </section>
+    </main>
+
+    <!-- Our headquarter -->
+    <section class="headquarter">
+        <h2>Our headquarter</h2>
+        <div class="location">
+            <div class="circle">
+                <img src="img/jakarta.jpg" alt="Jakarta" width="50px" height="50px"> Jakarta
+            </div>
+            <div class="circle">
+                <img src="img/bandung.jpg" alt="Bandung" width="50px" height="50px"> Bandung
+            </div>
+            <div class="circle">
+                <img src="img/surbaya.jpg" alt="Surabaya" width="50px" height="50px"> Surabaya
+            </div>
+        </div>
+    </section>
+
+    <!-- Message us -->
+    <div class="form-container">
+        <section class="message-form">
+            <h2>Message Us</h2>
+            <form id="message-form">
+                <label for="name"><b>Name:</b></label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="date"><b>Date of birth :</b></label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="gender"><b>Gender :</b></label>
+                <div class="gender-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+
+                <label for="message"><b>Message :</b></label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+
+    <div class="message-container">
+        <p><b>Current time :</b><span id="CurrentTime"></span></p>
+        <p><b>Name :</b><span id="resNama"></span></p>
+        <p><b>Date of birth :</b><span id="resDate"></span></p>
+        <p><b>Gender :</b><span id="resGender"></span></p>
+        <p><b>Message :</b><span id="resMessage"></span></p>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 tsaanativ</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
